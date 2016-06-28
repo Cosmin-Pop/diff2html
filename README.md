@@ -26,6 +26,7 @@ Usage: diff2html [--help] [--copyleft] [--debug] [--no-style] [--no-header] [--o
 --copyleft             Show the GNU v3 license
 --version              Show the version number and exit
 diff options           All other parameters are passed to diff
+```
 
 ## Examples
 
