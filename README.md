@@ -27,20 +27,27 @@ Usage: diff2html [--help] [--copyleft] [--debug] [--no-style] [--no-header] [--o
 --version              Show the version number and exit
 diff options           All other parameters are passed to diff
 
-Examples:
-diff2html file1.txt file2.txt > differences.html
+## Examples
 
-Treat all files as text and compare  them  line-by-line, even if they do
-not seem to be text.
-diff2html -a file1 file2 > differences.html
+Basic example:
 
-The same, but use the alternate style sheet contained in diff_style.css
-diff2html --style-sheet diff_style.css -a file1 file2 > differences.html
+```diff2html file1.txt file2.txt > differences.html```
 
-Pipe stdout of diff to stdin of diff2html (slightly faster)
-diff file1 file2 | diff2html [options] file1 file2
+Treat all files as text, even if they contain binary data, and compare them line-by-line:
 
-The default, hard-coded style sheet is the following:
+```diff2html -a file1 file2 > differences.html```
+
+Use a custom style sheet:
+
+```diff2html --style-sheet diff_style.css -a file1 file2 > differences.html```
+
+Pipe stdout of diff to stdin of diff2html (slightly faster):
+
+```diff file1 file2 | diff2html [options] file1 file2```
+
+## The default, hard-coded style sheet
+
+```
 <style>
 TABLE { border-collapse: collapse; border-spacing: 0px; }
 TD.linenum { color: #909090;
