@@ -280,7 +280,7 @@ if [ ${#diff} -eq 0 ]
 then
   #no diff stdin
   #call it on the command line
-  diff=`diff ${diffoptions} "${file1}" "${file2}"`
+  diff=`diff ${diffopts} "${file1}" "${file2}"`
 fi
 
 #Thow away the output lines from diff
