@@ -46,7 +46,7 @@ Pipe stdout of diff to stdin of diff2html (slightly faster):
 
 ```diff file1 file2 | diff2html [options] file1 file2```
 
-## The default, hard-coded style sheet
+## Default style sheet
 
 ```
 <style>
